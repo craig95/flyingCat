@@ -1,1 +1,3 @@
-== README I am Craig van Heerden and I will be writing a basic rails web app. 
+== README
+
+I am Craig van Heerden and I will be writing a basic rails web app. 
