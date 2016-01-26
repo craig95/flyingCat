@@ -2,25 +2,51 @@
 <html>
 <head>
   <title>Bike Berlin</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
 
-<nav>
-  <ul>
-    <li>Home</li>
-    <li>About</li>
-    <li>Contact</li>
-  </ul>
-</nav>
+  <!-- navbar starts here -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="personal-website navbar-brand">
+          <a href="#"><strong>Bike Berlin</strong></a>
+        </div> <!-- end personal-website -->
+      </div> <!-- end navbar-header -->
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><strong>Home</strong></a></li>
+          <li><a href="#"><strong>About</strong></a></li>
+          <li><a href="#"><strong>Contact</strong></a></li>
+        </ul>
+      </div> <!-- nav -->
+    </div> <!-- end nav container -->
+  </nav> <!-- end navbar -->
 
-<%= yield %>
+  <%= yield %>
 
-<footer>
-  &copy; 2015 Bike Berlin
-</footer>
+  <footer>
+    <div class="container-fluid footer-content">
+      <p>By Craig Van Heerden</p>
+      <p>&copy;2015 Bike Berlin</p>
+    </div>
+  </footer>
 
 </body>
 </html>
