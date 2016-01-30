@@ -1,0 +1,21 @@
+<div class="container show">
+
+  <h1>
+    Product:
+    <%= @product.name %>
+  </h1>
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Description: </strong>
+    <%= @product.description %>
+  </p>
+
+  <p>
+    <strong>Image url: </strong>
+    <%= @product.image_url %>
+  </p>
+  <br>
+  <%= link_to 'Edit', edit_product_path(@product), :class => 'btn btn-default' %>
+  <%= link_to 'Back', products_path, :class => 'btn btn-default' %>
+</div>
