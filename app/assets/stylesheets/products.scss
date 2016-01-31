@@ -20,6 +20,12 @@
   background-color: #fff;
 }
 
+.product_container:hover {
+  border-style: solid;
+  border-width: thick;
+  border-color: rgb(96, 68, 61);
+}
+
 .listing_image {
   height: 250px;
 }

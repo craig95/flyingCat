@@ -6,11 +6,11 @@
   <div class="container">
   <div class="row">
       <% @products.each do |product| %>
-        <div class="col-sm-2 col-md-4 product_container">
+        <a href="<%=edit_product_path(product) %>"><div class="col-sm-2 col-md-4 product_container">
           <%= image_tag(product.image_url, class: "img-responsive listing_image") %>
           <h1><%= product.name %></h1>
           <p><%= product.description %></p>
-        </div><!-- /col -->
+        </div></a><!-- /col -->
       <% end %>
   </div><!-- /row -->
 </div><!-- /container -->
