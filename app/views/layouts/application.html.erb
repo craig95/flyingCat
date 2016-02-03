@@ -26,14 +26,15 @@
           <span class="icon-bar"></span>
         </button>
         <div class="personal-website navbar-brand">
-          <a href="#"><strong>Bike Berlin</strong></a>
+          <%= link_to 'Bike Berlin', root_path %>
         </div> <!-- end personal-website -->
       </div> <!-- end navbar-header -->
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><strong>Home</strong></a></li>
-          <li><a href="#"><strong>About</strong></a></li>
-          <li><a href="#"><strong>Contact</strong></a></li>
+          <li><%= link_to 'About', static_pages_about_path %></li>
+          <li><%= link_to 'Contact', static_pages_contact_path %></li>
+          <li><%= link_to 'Products', products_path %></li>
+          <li><a
         </ul>
       </div> <!-- nav -->
     </div> <!-- end nav container -->
