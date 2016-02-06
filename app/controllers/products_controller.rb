@@ -4,7 +4,16 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    if params[:q]
+      search_term = params[:q]
+      if Rails.env.development?
+        @products = Product.where("name LIKE ?", "%#{search_term}%")
+      else
+        @products = Product.where("name ilike ?", "%#{search_term}%")
+      end
+    else
+      @products = Product.all
+    end
   end
 
   # GET /products/1
@@ -43,6 +52,8 @@ class ProductsController < ApplicationController
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to products_path, notice: 'Product was successfully updated.' }
+        text = 'Goes Here!'
+        puts "\033[31m#{text}\033[0m"
         format.json { render :show, status: :ok, location: @product }
       else
         format.html { render :edit }
