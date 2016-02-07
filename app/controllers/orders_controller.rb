@@ -1,5 +1,6 @@
 class OredersController < ApplicationController
 
+  before_filter :authenticate_user!
 
   def index
   end
@@ -13,7 +14,7 @@ class OredersController < ApplicationController
   def create
   end
 
-  def destroy    
+  def destroy
   end
 
 end
