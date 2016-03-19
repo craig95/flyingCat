@@ -16,3 +16,42 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+.submit-comment {
+  margin-top: 3%;
+}
+
+.comment {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-container {
+  width: 300px;
+  float: left;
+  height: auto;
+  margin: 1%;
+  border: solid grey;
+  border-radius: 10px;
+}
+
+.product-container h1 {
+  display: block;
+  padding: 1%;
+}
+
+.product-container p {
+  display: block;
+  padding: 2%
+}
+
+.listing-image {
+  margin: 1%;
+  height: 90%;
+  width: 90%;
+}
+
+.product-container:hover {
+  border-color: rgb(96, 68, 61);
+}
