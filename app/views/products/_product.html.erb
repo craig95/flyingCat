@@ -1,5 +1,7 @@
-<a href="<%=product_path(product) %>"><div class="col-sm-2 col-md-4 product_container">
-  <%= image_tag(product.image_url, class: "img-responsive listing_image") %>
-  <h1><%= product.name %></h1>
-  <p><%= product.description %></p>
-</div></a><!-- /col -->
+<li class="product-list-item">
+  <a href="<%=product_path(product) %>"><div class="product_container">
+    <%= image_tag(product.image_url, class: "img-responsive listing_image") %>
+    <h1><%= product.name %></h1>
+    <p><%= product.description[0..300] %></p>
+  </div></a><!-- /col -->
+</li>
