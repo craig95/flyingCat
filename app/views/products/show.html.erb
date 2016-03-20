@@ -1,7 +1,3 @@
-<div class="container-fluid">
-  <p id="notice"><%= notice %></p>
-</div>
-
 <div class="container show">
 
   <div class="row">
@@ -38,6 +34,10 @@
 
     <div class="">
       <%= render 'comments' %>
+    </div>
+
+    <div class="paginate-nav">
+      <%= will_paginate @comments %>
     </div>
 
     <div class="submit-comment">
