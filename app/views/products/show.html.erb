@@ -15,13 +15,19 @@
 
 
       <p>
-        Colour:
-        <%= @product.colour %>
+        Price: $
+        <%= sprintf "%.2f", @product.price %>
       </p>
 
       <p>
         Average Rating:
         <div class="rated" data-score="<%= @product.average_rating %>"></div>
+      </p>
+
+      <p>
+        <%= form_tag "/payments/create" do %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
       </p>
 
     </div>
