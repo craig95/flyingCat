@@ -13,7 +13,7 @@ class PaymentsController < ApplicationController
                 :description => params[:stripeEmail]
                 )
             if charge.paid
-                Order.create(product_id: @product, user_id: @user, total: @product.price.round)
+                Order.create(product_id: @product.id, user_id: @user.id, total: @product.price.round)
                 flash[:notice] = "Thank you for purchasing!"
             end
         rescue Stripe::CardError => e
